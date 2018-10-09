@@ -1,5 +1,11 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatTableDataSource} from '@angular/material';
+declare var jquery:any;
+declare var $ :any;
+
+
+
+declare function cargarGrafica() : any;
 
 export interface PeriodicElement {
   name: string;
@@ -25,17 +31,28 @@ const ELEMENT_DATA: PeriodicElement[] = [
  * @title Table with filtering
  */
 @Component({
-  selector: 'table-filtering-example',
+  selector: 'index',
   styleUrls: ['../css/table-filtering-example.css'],
   templateUrl: '../views/IndexComponents.html',
 })
 export class IndexComponents  {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
-
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+ 
+  
+ngOnInit(){
+        console.log('Entro para cargar');
+        $( "body" ).css("background-image", "url('../assets/img/dash-bg-01.jpg')");
+        cargarGrafica();
   }
+
+
+
+
+
+           
+
+
+
+
 }
 
 

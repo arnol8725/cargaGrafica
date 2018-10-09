@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 // Componentes
 import { HomeComponent } from './components/HomeComponent';
 import { IndexComponents } from './components/IndexComponents';
+import { TableComponents } from './components/TableComponents';
+
 /*import { ErrorComponent } from './components/error.component';
 import { ProductosListComponent } from './components/productos-list.component';
 import { ProductoAddComponent } from './components/producto-add.component';
@@ -28,7 +30,9 @@ const appRoutes: Routes = [
 	/*{path: '', redirectTo: '/productos',
     pathMatch: 'full'},*/
     {path: '', component: HomeComponent},
+    {path: 'home', component: HomeComponent},
     {path: 'index', component: IndexComponents},
+    {path: 'tabla', component: TableComponents}
 	/*{path: 'home', component: HomeComponent},
 	{path: 'productos', component: ProductosListComponent},
 	{path: 'crear-producto', component: ProductoAddComponent},
@@ -46,7 +50,7 @@ const appRoutes: Routes = [
 	{path: 'egreso925',component:Egreso925Component},
 	{path: 'egreso1225',component:Egreso1225Component},
 	{path: '**', component: ErrorComponent}*/
-	
+
 ];
 
 export const appRoutingProviders: any[] = [];

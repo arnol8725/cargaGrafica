@@ -169,4 +169,43 @@
     can be found in the LICENSE file at http://angular.io/license -->
 
 
-  
+   <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <!-- https://jquery.com/download/ -->
+    <script src="../assets/js/moment.min.js"></script>
+    <!-- https://momentjs.com/ -->
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/Chart.min.js"></script>
+    <!-- http://www.chartjs.org/docs/latest/ -->
+    <script src="../assets/js/fullcalendar.min.js"></script>
+    <!-- https://fullcalendar.io/ -->
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+    <script src="../assets/js/tooplate-scripts.js"></script>
+    <script>
+        let ctxLine,
+            ctxBar,
+            ctxPie,
+            optionsLine,
+            optionsBar,
+            optionsPie,
+            configLine,
+            configBar,
+            configPie,
+            lineChart,
+        barChart, pieChart;
+        // DOM is ready
+        $(function () {
+            updateChartOptions();
+            drawLineChart(); // Line Chart
+            drawBarChart(); // Bar Chart
+            drawPieChart(); // Pie Chart
+            drawCalendar(); // Calendar
+
+            $(window).resize(function () {
+                updateChartOptions();
+                updateLineChart();
+                updateBarChart();
+                reloadPage();
+            });
+        })
+    </script>

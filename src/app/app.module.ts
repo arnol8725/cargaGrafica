@@ -56,7 +56,7 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {IndexComponents} from './components/IndexComponents';
 import {HomeComponent} from './components/HomeComponent';
-
+import { TableComponents } from './components/TableComponents';
 
 @NgModule({
   exports: [
@@ -105,7 +105,8 @@ export class DemoMaterialModule {}
   declarations: [
     AppComponent,
     IndexComponents,
-    HomeComponent
+    HomeComponent,
+    TableComponents
   ],
   imports: [
     BrowserModule,
@@ -118,9 +119,9 @@ export class DemoMaterialModule {}
      routing,
     NgbModule.forRoot(),
   ],
-  entryComponents: [IndexComponents,HomeComponent],
+  entryComponents: [IndexComponents,HomeComponent,TableComponents],
   providers: [ appRoutingProviders,],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,IndexComponents,HomeComponent,TableComponents]
 })
 export class AppModule { }
-platformBrowserDynamic().bootstrapModule(AppModule);
+//platformBrowserDynamic().bootstrapModule(AppModule);

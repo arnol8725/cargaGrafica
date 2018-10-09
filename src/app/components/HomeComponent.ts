@@ -21,5 +21,7 @@ export class HomeComponent{
 
 	ngOnInit(){
 		console.log('Se ha cargado el componente home.component.ts');
+		$("body").css("background-image" , "url('../assets/img/dash-bg-03.jpg')");
+
 	}
 }
